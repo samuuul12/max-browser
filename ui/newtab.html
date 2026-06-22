@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Nova Guia</title>
+    <link rel="stylesheet" href="newtab.css">
+    <script src="qwebchannel.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Search Area -->
+        <div class="search-section">
+            <h1 class="logo">Max <span>Browser</span></h1>
+            <form id="search-form" action="https://www.google.com/search" method="get">
+                <div class="search-box">
+                    <svg class="search-icon" viewBox="0 0 24 24">
+                        <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                    </svg>
+                    <input type="text" name="q" placeholder="Pesquisar no Google ou digitar um URL" autofocus autocomplete="off">
+                </div>
+            </form>
+        </div>
+
+        <!-- Shortcuts Area -->
+        <div class="shortcuts-section">
+            <h3>Atalhos Rápidos</h3>
+            <div class="shortcuts-grid" id="shortcuts-grid">
+                <!-- Dynamic Shortcuts -->
+            </div>
+        </div>
+
+        <!-- Float Customization Button -->
+        <button id="customize-btn" class="customize-btn">
+            <svg viewBox="0 0 24 24" class="btn-icon">
+                <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+            </svg>
+            Personalizar
+        </button>
+
+        <!-- Customization Modal -->
+        <div id="custom-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Personalizar Nova Guia</h2>
+                    <span class="close-modal" id="close-modal">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div class="control-group">
+                        <label>Plano de Fundo (Wallpaper)</label>
+                        <div class="wallpaper-actions">
+                            <button id="btn-select-wp" class="btn btn-primary">Escolher Imagem</button>
+                            <button id="btn-remove-wp" class="btn btn-danger">Remover Wallpaper</button>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label for="opacity-slider">Opacidade do Wallpaper (<span id="opacity-val">80%</span>)</label>
+                        <input type="range" id="opacity-slider" min="10" max="100" value="80" class="slider">
+                    </div>
+                    <div class="control-group quick-links">
+                        <label>Páginas Internas</label>
+                        <div class="links-row">
+                            <button class="btn btn-secondary" onclick="navigateInternal('browser://history')">Histórico</button>
+                            <button class="btn btn-secondary" onclick="navigateInternal('browser://bookmarks')">Favoritos</button>
+                            <button class="btn btn-secondary" onclick="navigateInternal('browser://downloads')">Downloads</button>
+                        </div>
+                        <button class="btn btn-primary" onclick="navigateInternal('browser://settings')" style="margin-top: 10px;">Configurações Completas</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="newtab.js"></script>
+</body>
+</html>

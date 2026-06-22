@@ -1,0 +1,22 @@
+{
+    "wallpaper_path": "",
+    "wallpaper_opacity": 0.86,
+    "bookmarks": [],
+    "history": [],
+    "downloads": [
+        {
+            "id": "34b29f0a-9730-460f-b77e-ab19bed746fd",
+            "filename": "black.12264.cbs",
+            "url": "https://gamefaqs.gamespot.com/ps2/920890-black/saves/12264",
+            "totalBytes": 15152,
+            "receivedBytes": 15152,
+            "state": "COMPLETED",
+            "startTime": 1782153943284,
+            "speed": 1377454,
+            "filePath": "/home/lazaro/Downloads/black.12264.cbs"
+        }
+    ],
+    "search_engine": "https://www.google.com/search?q=",
+    "home_page_type": "newtab",
+    "home_page_url": "browser://newtab"
+}
