@@ -1,43 +1,41 @@
 # 🚀 Max Browser
 
-Um navegador moderno para Linux que combina a robustez e o desempenho do **PyQt6 (QtWebEngine)** no backend com a flexibilidade e o design moderno de uma interface híbrida baseada em **HTML5, CSS3 e JavaScript**.
+A modern browser for Linux that combines the robustness and performance of **PyQt6 (QtWebEngine)** in the backend with the flexibility and contemporary design of a hybrid interface built on **HTML5, CSS3, and JavaScript**.
 
-Inspirado na usabilidade do Google Chrome, o **Max Browser** traz uma identidade visual própria e minimalista com elementos de vidro e suporte completo a planos de fundo dinâmicos personalizados.
-
----
-
-## ✨ Recursos Principais
-
-- **📂 Navegação Híbrida**: Interface de abas e botões renderizados localmente via HTML/CSS/JS, garantindo leveza e transições suaves.
-- **🖼️ Wallpaper Personalizado**: Defina qualquer imagem do seu computador como plano de fundo da página de Nova Guia, com controle deslizante de opacidade em tempo real.
-- **⚙️ Painel de Configurações Completo**: Interface de configurações organizada com sidebar intuitiva dividida em Geral, Início, Pesquisa e Privacidade (conforme padrões de UI de alta fidelidade).
-- **⭐ Favoritos e Histórico**: Sistema de marcadores rápidos na barra de endereços (estrela) e página dedicada para gerenciar favoritos e histórico de visitas.
-- **⚡ Downloads em Tempo Real**: Monitoramento nativo de downloads com cálculo de progresso, velocidade de download e opções para abrir arquivos ou pastas diretamente.
-- **🔍 Mecanismo de Busca Customizável**: Suporte a Google, Bing, DuckDuckGo e Yahoo diretamente na barra de endereços.
+Inspired by the usability of Google Chrome, **Max Browser** features its own minimalist visual identity, incorporating "glassmorphism" elements and full support for custom, dynamic backgrounds.
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## ✨ Key Features
 
-- **Backend**: Python 3, PyQt6 (com PyQt6-WebEngine e PyQt6-WebChannel)
-- **Frontend**: HTML5, Vanilla CSS3 (com Glassmorphism e Transições Suaves), JavaScript Moderno
-- **Comunicação**: QWebChannel para integração bidirecional assíncrona entre o Python e o motor do navegador.
+- **📂 Hybrid Navigation**: An interface with tabs and buttons rendered locally via HTML/CSS/JS, ensuring a lightweight experience and smooth transitions.
+- **🖼️ Custom Wallpaper**: Set any image from your computer as the background for the "New Tab" page, with a real-time opacity slider.
+- **⚙️ Comprehensive Settings Panel**: An organized settings interface featuring an intuitive sidebar, divided into General, Home, Search, and Privacy sections (following high-fidelity UI standards).
+- **⭐ Bookmarks and History**: A quick-bookmarking system in the address bar (via a star icon) and a dedicated page for managing bookmarks and browsing history.
+- **⚡ Real-time Downloads**: Native download monitoring, including progress tracking, download speed, and options to open files or their containing folders directly.
+- **🔍 Customizable Search Engine**: Support for Google, Bing, DuckDuckGo, and Yahoo, accessible directly from the address bar.
 
 ---
 
-## 🚀 Como Executar
+## 🛠️ Technologies Used
 
-### 1. Instalar as Dependências
+- **Backend**: Python 3, PyQt6 (with PyQt6-WebEngine and PyQt6-WebChannel)
+- **Frontend**: HTML5, Vanilla CSS3 (featuring Glassmorphism and smooth transitions), Modern JavaScript
+- **Communication**: QWebChannel for asynchronous, two-way integration between Python and the browser engine. ---
 
-Certifique-se de que o Python 3 e o gerenciador de pacotes pip estão instalados no seu sistema Linux. Em seguida, instale os requisitos do PyQt6:
+## 🚀 How to Run
+
+### 1. Install Dependencies
+
+Ensure that Python 3 and the `pip` package manager are installed on your Linux system. Then, install the required PyQt6 components:
 
 ```bash
 pip install PyQt6 PyQt6-WebEngine PyQt6-WebChannel
 ```
 
-### 2. Iniciar o Navegador
+### 2. Launch the Browser
 
-Clone ou acesse a pasta do projeto e inicie o arquivo principal:
+Navigate to the project folder and run the main file:
 
 ```bash
 cd modern_browser
@@ -46,30 +44,27 @@ python3 main.py
 
 ---
 
-## 📂 Estrutura do Projeto
+## 📂 Project Structure
 
 ```
 modern_browser/
-├── main.py             # Script principal em Python (backend e motor PyQt6)
-├── config.json         # Banco de dados local em JSON (histórico, favoritos, downloads e wallpaper)
-└── ui/                 # Arquivos da interface do usuário (HTML/CSS/JS)
-    ├── bar.html/css/js        # Barra de topo (abas, navegação e endereço)
-    ├── newtab.html/css/js     # Página de Nova Guia (wallpaper, atalhos, busca)
-    ├── settings.html/css/js   # Painel de configurações com sidebar dedicada
-    ├── history.html/css/js    # Página de histórico de navegação
-    ├── bookmarks.html/css/js  # Página de favoritos
-    ├── downloads.html/css/js  # Página de gerenciamento de downloads
-    └── qwebchannel.js         # Biblioteca de integração do Qt
+├── main.py             # Main Python script (backend and PyQt6 engine)
+├── config.json         # Local JSON database (history, bookmarks, downloads, and wallpaper)
+└── ui/                 # User interface files (HTML/CSS/JS)
+├── bar.html/css/js        # Top bar (tabs, navigation, and address bar)
+├── newtab.html/css/js     # New Tab page (wallpaper, shortcuts, search)
+├── settings.html/css/js   # Settings panel with a dedicated sidebar
+├── history.html/css/js    # Browsing history page
+├── bookmarks.html/css/js  # Bookmarks page
+├── downloads.html/css/js  # Downloads management page
+└── qwebchannel.js         # Qt integration library
 ```
 
 ---
 
-## 🎨 Personalização do Wallpaper
+## 🎨 Customizing the Wallpaper
 
-No painel de Configurações (ou no botão "Personalizar" da Nova Guia):
-1. Clique em **Escolher Imagem** e selecione qualquer arquivo de imagem (`.png`, `.jpg`, `.jpeg`, `.bmp`).
-2. Ajuste o controle deslizante de **Opacidade** para misturar a imagem com o tema escuro do navegador.
-3. Suas alterações são salvas automaticamente no arquivo `config.json` e serão aplicadas na próxima inicialização.
-
-;)
-
+In the Settings panel (or via the "Customize" button on the New Tab page):
+1. Click **Choose Image** and select any image file (`.png`, `.jpg`, `.jpeg`, `.bmp`).
+2. Adjust the **Opacity** slider to blend the image with the browser's dark theme.
+3. Your changes are automatically saved to the `config.json` file and will be applied the next time you launch the browser. ;)
